@@ -16,7 +16,7 @@
  * @copyright  (c) 2016, Moisés Barquín <moises.barquin@gmail.com>
  * @version    GIT: $Id$
  */
-namespace mbarquin\reactSlim;
+namespace easyconn\reactSlim;
 
 /**
  * Response adapter class

@@ -15,7 +15,7 @@
  * @copyright  (c) 2016, Moisés Barquín <moises.barquin@gmail.com>
  * @version    GIT: $Id$
  */
-namespace mbarquin\reactSlim\Request;
+namespace easyconn\reactSlim\Request;
 
 /**
  * Contract to have a request to adapt a react request object to a new one

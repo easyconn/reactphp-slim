@@ -15,7 +15,7 @@
  * @copyright  (c) 2016, Moisés Barquín <moises.barquin@gmail.com>
  * @version    GIT: $Id$
  */
-namespace mbarquin\reactSlim\Request;
+namespace easyconn\reactSlim\Request;
 
 use Slim\Http\Request;
 use Slim\Http\Headers;

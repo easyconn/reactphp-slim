@@ -15,10 +15,10 @@
  * @copyright  (c) 2016, Moisés Barquín <moises.barquin@gmail.com>
  * @version    GIT: $Id$
  */
-namespace mbarquin\reactSlim;
+namespace easyconn\reactSlim;
 
-use \mbarquin\reactSlim\Request\SlimRequest;
-use \mbarquin\reactSlim\Response\SlimResponse;
+use \easyconn\reactSlim\Request\SlimRequest;
+use \easyconn\reactSlim\Response\SlimResponse;
 
 /**
  * Server launcher class. It makes the setup of the reactPHP server
@@ -55,7 +55,7 @@ class Server
      *
      * @param int $port
      *
-     * @return \mbarquin\reactSlim\Server
+     * @return \easyconn\reactSlim\Server
      */
     public function withPort($port)
     {
@@ -68,7 +68,7 @@ class Server
 
     public function withIP($ip)
     {
-        if (is_int($ip) === true) {
+        if (is_int($ip) === false) {
             $this->ip = $ip;
         }
 
