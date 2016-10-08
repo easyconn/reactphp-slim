@@ -1,5 +1,5 @@
 {
-    "name": "zz/reactphp-slim",
+    "name": "easyconn/reactphp-slim",
     "description": "Slim Request and Response extended to allow reactPHP serve a Slim framework instance",
     "license" : "MIT",
     "require": {
