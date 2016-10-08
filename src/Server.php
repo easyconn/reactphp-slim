@@ -47,6 +47,8 @@ class Server
      */
     private $port = 1337;
 
+    private $ip = '127.0.0.1';
+
 
     /**
      * Sets the listened port
@@ -63,6 +65,16 @@ class Server
 
         return $this;
     }
+
+    public function withIP($ip)
+    {
+        if (is_int($ip) === true) {
+            $this->ip = $ip;
+        }
+
+        return $this;
+    }
+
 
     /**
      * Returns the two callbacks which will process the HTTP call
@@ -108,9 +120,9 @@ class Server
         // Ligamos la closure al evento request.
         $http->on('request', $serverCallback);
 
-        echo "Server running at http://127.0.0.1:1337\n";
+        echo "Server running at http://".$this->ip.":".$this->port."\n";
 
-        $socket->listen($this->port);
+        $socket->listen($this->port, $this->ip);
         $loop->run();
     }
 
