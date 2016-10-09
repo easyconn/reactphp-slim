@@ -21,6 +21,7 @@ use Slim\Http\Request;
 use Slim\Http\Headers;
 use Slim\Http\Uri;
 use Slim\Http\RequestBody;
+use Slim\Http\Body;
 
 /**
  * Request adapter class file for a React request object
@@ -73,8 +74,8 @@ class SlimRequest implements RequestInterface
         if (empty($body) === false) {
             $stream = fopen('php://temp', 'w+');
             fwrite($stream, $body);
-
-            $slimBody = new RequestBody($stream);
+            rewind($stream);
+            $slimBody = new Body($stream);
         }
         else
             $slimBody = new RequestBody();
