@@ -94,9 +94,9 @@ class Server
                 $slRequest  = SlimRequest::createFromReactRequest($request, $body);
                 $slResponse = SlimResponse::createResponse();
 
-                $app->process($slRequest, $slResponse);
+                $newResponse = $app->process($slRequest, $slResponse);
 
-                SlimResponse::setReactResponse($response, $slResponse, true);
+                SlimResponse::setReactResponse($response, $newResponse, true);
             });
         };
     }
